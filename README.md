@@ -30,6 +30,7 @@ npm run dev
 | [01-sphere](projects/01-sphere) | Template de base : `WebGPURenderer` + sphère avec un matériau TSL |
 | [02-chromatic-aberration](projects/02-chromatic-aberration) | Post-process : aberration chromatique custom (`TempNode`) réglable avec lil-gui |
 | [03-instancing](projects/03-instancing) | Instancing : grille de cubes animée par un compute shader (`instancedArray` + `instanceIndex`) |
+| [04-sprites](projects/04-sprites) | Sprites : nuage de particules flottantes (`SpriteNodeMaterial` + `range`) |
 
 ## Ajouter un projet
 
