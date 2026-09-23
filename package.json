@@ -1,0 +1,15 @@
+{
+  "name": "gobelins-day-2",
+  "private": true,
+  "description": "Mini-projets Three.js / TSL — un dossier par projet dans projects/",
+  "workspaces": [
+    "projects/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
