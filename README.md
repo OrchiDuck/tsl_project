@@ -33,6 +33,7 @@ npm run dev
 | [04-sprites](projects/04-sprites) | Sprites : nuage de particules flottantes (`SpriteNodeMaterial` + `range`) |
 | [05-gpgpu](projects/05-gpgpu) | GPGPU : fontaine de particules (buffers position/vitesse/vie, compute d'init + d'update, respawn) |
 | [06-depth](projects/06-depth) | Profondeur : eau floue et teintée selon l'épaisseur (`linearDepth` vs `viewportLinearDepth`) |
+| [07-cursor](projects/07-cursor) | Interaction : traînée de particules émises au curseur (raycast → `uniform` → compute) |
 
 ## Ajouter un projet
 
