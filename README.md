@@ -32,6 +32,7 @@ npm run dev
 | [03-instancing](projects/03-instancing) | Instancing : grille de cubes animée par un compute shader (`instancedArray` + `instanceIndex`) |
 | [04-sprites](projects/04-sprites) | Sprites : nuage de particules flottantes (`SpriteNodeMaterial` + `range`) |
 | [05-gpgpu](projects/05-gpgpu) | GPGPU : fontaine de particules (buffers position/vitesse/vie, compute d'init + d'update, respawn) |
+| [06-depth](projects/06-depth) | Profondeur : eau floue et teintée selon l'épaisseur (`linearDepth` vs `viewportLinearDepth`) |
 
 ## Ajouter un projet
 
