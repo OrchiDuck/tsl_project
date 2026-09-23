@@ -31,6 +31,7 @@ npm run dev
 | [02-chromatic-aberration](projects/02-chromatic-aberration) | Post-process : aberration chromatique custom (`TempNode`) réglable avec lil-gui |
 | [03-instancing](projects/03-instancing) | Instancing : grille de cubes animée par un compute shader (`instancedArray` + `instanceIndex`) |
 | [04-sprites](projects/04-sprites) | Sprites : nuage de particules flottantes (`SpriteNodeMaterial` + `range`) |
+| [05-gpgpu](projects/05-gpgpu) | GPGPU : fontaine de particules (buffers position/vitesse/vie, compute d'init + d'update, respawn) |
 
 ## Ajouter un projet
 
