@@ -17,6 +17,7 @@ export default class Lightsaber {
 
     this.setHilt()
     this.setBlade()
+    this.setLight(gui)
 
     this.particles = new BladeParticles({ scene, renderer, blade: this.blade, colorEnd: this.material.lightColor, gui })
 
@@ -76,6 +77,25 @@ export default class Lightsaber {
     this.blade.add(tip)
   }
 
+  setLight(gui) {
+    this.light = new THREE.PointLight(this.material.lightColor.value, 0, 0, 2)
+    this.light.position.y = this.bladePivot.position.y + BLADE_LENGTH / 2
+    this.rig.add(this.light)
+
+    this.lightSettings = { intensity: 300, flicker: 0.08 }
+    const folder = gui.addFolder('Saber Light')
+    folder.close()
+    folder.add(this.lightSettings, 'intensity', 0, 2000, 1)
+    folder.add(this.lightSettings, 'flicker', 0, 0.5, 0.001)
+    folder.add(this.light, 'decay', 0, 3, 0.01)
+  }
+
+  updateLight(eased) {
+    const flicker = 1 + (Math.random() * 2 - 1) * this.lightSettings.flicker
+    this.light.color.copy(this.material.lightColor.value)
+    this.light.intensity = this.lightSettings.intensity * eased * flicker
+  }
+
   toggle() {
     this.ignition.open = !this.ignition.open
   }
@@ -88,6 +108,7 @@ export default class Lightsaber {
     const eased = 1 - Math.pow(1 - this.ignition.progress, 3)
     this.bladePivot.scale.y = eased
     this.bladePivot.visible = eased > 0.001
+    this.updateLight(eased)
   }
 
   update(dt) {
