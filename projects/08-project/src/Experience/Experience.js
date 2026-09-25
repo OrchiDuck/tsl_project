@@ -75,11 +75,13 @@ export default class Experience {
     this.renderPipeline.outputNode = sceneOutput.add(trail).add(bloomPass)
 
     const bloomGui = this.gui.addFolder('Bloom')
+    bloomGui.close()
     bloomGui.add(bloomPass.strength, 'value', 0, 3, 0.01).name('strength')
     bloomGui.add(bloomPass.radius, 'value', 0, 1, 0.01).name('radius')
     bloomGui.add(bloomPass.threshold, 'value', 0, 1, 0.01).name('threshold')
 
     const afterImageGui = this.gui.addFolder('After Image')
+    afterImageGui.close()
     afterImageGui.add(afterImageDamp, 'value', 0, 1, 0.001).name('damp')
     afterImageGui.add({ enable: true }, 'enable').onChange((v) => { afterImageEnabled.value = v ? 1 : 0 })
   }

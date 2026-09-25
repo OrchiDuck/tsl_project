@@ -25,11 +25,14 @@ export default class Lightsaber {
       onClick: () => this.toggle(),
     })
 
-    this.ignition = { progress: 0, open: false, duration: 0.35 }
-    gui.addFolder('Ignition').add(this.ignition, 'duration', 0.05, 2, 0.01)
+    this.ignition = { progress: 0, open: false, duration: 0.55 }
+    const ignitionFolder = gui.addFolder('Ignition')
+    ignitionFolder.close()
+    ignitionFolder.add(this.ignition, 'duration', 0.05, 2, 0.01)
 
     this.tilt = { strength: 0.15, max: 1, smoothing: 5 }
     const tiltFolder = gui.addFolder('Tilt')
+    tiltFolder.close()
     tiltFolder.add(this.tilt, 'strength', 0, 0.5, 0.001)
     tiltFolder.add(this.tilt, 'max', 0, Math.PI / 2, 0.01)
     tiltFolder.add(this.tilt, 'smoothing', 1, 30, 0.1)

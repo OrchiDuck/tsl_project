@@ -35,6 +35,7 @@ export default class BladeMaterial extends THREE.MeshBasicNodeMaterial {
 
   setGui(gui) {
     const folder = gui.addFolder('Light')
+    folder.close()
     folder.addColor(this.lightColor, 'value').name('Color')
     folder.add(this.lightBloom, 'value', 0, 2, 0.01).name('Bloom Intensity')
     folder.add(this.powerFresnel, 'value', 0, 5).name('Fresnel Power')

@@ -79,8 +79,8 @@ export default class BladeParticles {
     sprite.frustumCulled = false
     blade.add(sprite)
 
-    // Debug
     const folder = gui.addFolder('Particles')
+    folder.close()
     folder.add(speed, 'value', 0, 15, 0.1).name('speed')
     folder.add(spread, 'value', 0, 5, 0.01).name('spread')
     folder.add(gravity, 'value', 0, 20, 0.01).name('gravity')
